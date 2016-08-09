@@ -1,0 +1,25 @@
+{
+  "name": "altour-portal",
+  "version": "1.0.0",
+  "description": "Altour Portal",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "compile": "webpack"
+  },
+  "keywords": [
+    "portal",
+    "works"
+  ],
+  "author": "Swifttrip",
+  "license": "ISC",
+  "dependencies": {
+    "history": "^1.17.0",
+    "json-loader": "^0.5.4",
+    "jsonfile": "^2.3.1",
+    "moment": "^2.14.1",
+    "moment-timezone": "^0.5.3",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
+  }
+}

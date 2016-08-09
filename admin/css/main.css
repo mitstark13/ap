@@ -1,0 +1,143 @@
+/* line 1, main.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: 'Arial Unicode', sans-serif; }
+
+/* line 9, main.scss */
+header {
+  height: 80px;
+  width: 100vw;
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #002967;
+  color: white; }
+  /* line 17, main.scss */
+  header img {
+    display: inline-block;
+    height: 60px; }
+  /* line 22, main.scss */
+  header ul {
+    display: inline-block;
+    position: absolute;
+    margin-left: 35px;
+    top: 34px; }
+    /* line 28, main.scss */
+    header ul li {
+      display: inline;
+      text-decoration: none;
+      margin-right: 18px; }
+      /* line 33, main.scss */
+      header ul li:hover {
+        cursor: pointer;
+        border-bottom: 1px solid white; }
+      /* line 38, main.scss */
+      header ul li .active {
+        border-bottom: 1px solid white; }
+  /* line 44, main.scss */
+  header button {
+    position: absolute;
+    display: inline-block;
+    background-color: green;
+    height: 40px;
+    width: 130px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    top: 20px;
+    right: 40px; }
+    /* line 56, main.scss */
+    header button:hover {
+      cursor: pointer; }
+    /* line 60, main.scss */
+    header button a {
+      text-decoration: none;
+      color: white; }
+
+/* line 67, main.scss */
+h2 {
+  display: inline-block;
+  margin-left: 47%;
+  font-size: 28px; }
+
+/* line 73, main.scss */
+.welcome {
+  height: 200px;
+  padding: 50px 0px;
+  text-align: center; }
+  /* line 78, main.scss */
+  .welcome h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px; }
+
+/* line 85, main.scss */
+.portals {
+  display: block;
+  margin-bottom: 60px; }
+  /* line 89, main.scss */
+  .portals button {
+    background-color: green;
+    height: 40px;
+    width: 130px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    float: right;
+    margin-right: 5%; }
+    /* line 99, main.scss */
+    .portals button a {
+      text-decoration: none;
+      color: white; }
+  /* line 105, main.scss */
+  .portals img {
+    max-width: 400px;
+    max-height: 200px; }
+  /* line 110, main.scss */
+  .portals td:nth-child(even) {
+    background-color: #F2F2F2; }
+  /* line 114, main.scss */
+  .portals table {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto; }
+    /* line 119, main.scss */
+    .portals table tr:first-of-type {
+      background-color: #002967;
+      color: white; }
+    /* line 124, main.scss */
+    .portals table .actions img {
+      display: inline;
+      height: 30px;
+      width: auto; }
+      /* line 129, main.scss */
+      .portals table .actions img:nth-child(2) {
+        margin: 0 5px; }
+      /* line 133, main.scss */
+      .portals table .actions img:hover {
+        cursor: pointer; }
+
+/* line 142, main.scss */
+.users table {
+  width: 90%;
+  text-align: center;
+  margin: 20px auto; }
+  /* line 147, main.scss */
+  .users table tr:first-of-type {
+    background-color: #002967;
+    color: white; }
+  /* line 152, main.scss */
+  .users table tr:nth-child(even) {
+    background-color: #F2F2F2; }
+
+/* line 158, main.scss */
+footer {
+  height: 40px;
+  width: 100vw;
+  background-color: #DCDBDB;
+  text-align: center;
+  padding: 8px; }
+
+/*# sourceMappingURL=main.css.map */

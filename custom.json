@@ -1,0 +1,48 @@
+{"starkey":
+  {
+   "companyName": "ABC Company",
+   "welcomeMessage": "The Travel Portal is your “go to” place for information on the ABC Company travel program, Concur Travel and other general travel information. We will continue to add valuable links to make this site a convenient place to visit when traveling for ABC. Please contact John Smith at jsmith@email.com with questions and ideas for enhancing the portal.",
+   "logo": "img/customer.png",
+   "assistanceInfo": "Need help making a booking? Let us help. Call (555)-555-9999 for assistance",
+   "forms": [
+   	{
+   		"title": "Authorization Form",
+   		"description": "Auth form for company",
+   		"link": "https://www.geha.com/faqs-and-resources/for-providers/authorization-forms",
+         "img": "img/form.jpg"
+   	},
+   	{
+   		"title": "Credit Form",
+   		"description": "Credit form for company",
+   		"link": "https://www.geha.com/faqs-and-resources/for-providers/authorization-forms",
+         "img": "img/creditCard.jpg"
+   	},
+   	{
+   		"title": "Form",
+   		"description": "Basic form for company",
+   		"link": "https://www.geha.com/faqs-and-resources/for-providers/authorization-forms",
+         "img": "img/waitLine.jpg"
+   	},
+   	{
+   		"title": "Cash Advance Form",
+   		"description": "Cash Advance form for company",
+   		"link": "https://www.geha.com/faqs-and-resources/for-providers/authorization-forms",
+         "img": "img/money.jpg"
+   	}
+   ],
+   "resources": [
+   	{
+   		"name": "Google",
+   		"link": "http://google.com"
+   	},
+   	{
+   		"name": "Yahoo",
+   		"link": "http://yahoo.com"
+   	},
+   	{
+   		"name": "Atmospheres",
+   		"link": "http://atmospheres.co"
+   	}
+   ]
+  }
+}

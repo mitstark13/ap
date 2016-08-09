@@ -1,0 +1,183 @@
+/* line 2, admin.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Unicode', sans-serif; }
+
+/* line 8, admin.scss */
+header {
+  height: 105px;
+  width: 100vw;
+  margin: 0;
+  padding-top: 25px;
+  font-size: 46px;
+  text-align: center;
+  color: white;
+  background-color: #002967; }
+
+/* line 18, admin.scss */
+.addPortal {
+  margin: 0 auto 50px; }
+  /* line 21, admin.scss */
+  .addPortal h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400; }
+  /* line 27, admin.scss */
+  .addPortal span {
+    color: red;
+    font-size: 22px;
+    margin-left: 5px; }
+  /* line 32, admin.scss */
+  .addPortal small {
+    color: red;
+    font-size: 12px; }
+  /* line 36, admin.scss */
+  .addPortal textarea {
+    outline: none;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .5s;
+    -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+    -moz-transition-property: all;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6); }
+    /* line 45, admin.scss */
+    .addPortal textarea:focus {
+      background-color: #b7d2fb; }
+  /* line 50, admin.scss */
+  .addPortal form {
+    display: block;
+    margin: 20px auto;
+    max-width: 860px; }
+    /* line 55, admin.scss */
+    .addPortal form h2 {
+      margin-bottom: 2px;
+      font-size: 18px;
+      font-weight: 400; }
+    /* line 60, admin.scss */
+    .addPortal form input {
+      margin-bottom: 15px;
+      height: 30px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 100;
+      width: 250px;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: .5s;
+      -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+      -moz-transition-property: all;
+      -moz-transition-duration: .5s;
+      -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+      outline: none; }
+      /* line 75, admin.scss */
+      .addPortal form input:focus {
+        background-color: #b7d2fb; }
+    /* line 79, admin.scss */
+    .addPortal form button {
+      height: 25px;
+      width: 130px;
+      margin-right: 10px; }
+
+/* line 86, admin.scss */
+.homepageForms {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: 0 auto; }
+  /* line 92, admin.scss */
+  .homepageForms #form {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    width: 48%;
+    margin: 1% .5%; }
+
+/* line 101, admin.scss */
+.css {
+  position: relative;
+  display: block;
+  width: 900px;
+  margin: 0 auto; }
+  /* line 107, admin.scss */
+  .css h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400; }
+  /* line 113, admin.scss */
+  .css input {
+    margin-bottom: 15px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 100;
+    width: 250px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .5s;
+    -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+    -moz-transition-property: all;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+    outline: none; }
+    /* line 128, admin.scss */
+    .css input:focus {
+      background-color: #b7d2fb; }
+
+/* line 133, admin.scss */
+.additionalLinks {
+  border-top: 1px solid black; }
+  /* line 136, admin.scss */
+  .additionalLinks div {
+    border-bottom: 1px solid black;
+    margin: 10px 0px; }
+  /* line 141, admin.scss */
+  .additionalLinks button {
+    height: 40px;
+    width: 120px;
+    font-size: 18px;
+    color: white;
+    background-color: blue;
+    border: none; }
+
+/* line 151, admin.scss */
+.portalActions {
+  display: block;
+  margin: 0 auto;
+  width: 265px; }
+
+/* line 156, admin.scss */
+.createPortal {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: green;
+  height: 40px;
+  width: 130px;
+  font-size: 16px;
+  color: white;
+  border: none; }
+  /* line 167, admin.scss */
+  .createPortal:hover {
+    cursor: pointer; }
+
+/* line 171, admin.scss */
+.cancel {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: red;
+  height: 40px;
+  width: 130px;
+  font-size: 16px;
+  color: white;
+  border: none; }
+  /* line 182, admin.scss */
+  .cancel a {
+    color: white;
+    text-decoration: none; }
+  /* line 187, admin.scss */
+  .cancel:hover {
+    cursor: pointer; }
+
+/*# sourceMappingURL=admin.css.map */

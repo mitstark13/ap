@@ -1,0 +1,1397 @@
+/* line 5, style.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Unicode', sans-serif;
+  color: #3B3738;
+  overflow-x: hidden;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+  -moz-transition-property: all;
+  -moz-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6); }
+
+/* line 20, style.scss */
+html {
+  position: relative;
+  background-color: #fff; }
+
+/* line 25, style.scss */
+a {
+  text-decoration: none; }
+
+/* line 28, style.scss */
+#loadingCircle {
+  display: none;
+  margin: 0 auto; }
+
+/* line 32, style.scss */
+form {
+  text-align: center;
+  color: #000; }
+  /* line 35, style.scss */
+  form div {
+    display: table;
+    height: 64px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold; }
+    /* line 42, style.scss */
+    form div input {
+      height: 45px;
+      vertical-align: middle;
+      font-size: 24px;
+      margin: 10px auto; }
+
+/* line 51, style.scss */
+input {
+  color: #000; }
+
+/* line 55, style.scss */
+button {
+  outline: none;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  border: none;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none; }
+
+/* line 74, style.scss */
+button:hover {
+  cursor: pointer;
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none; }
+
+/* line 84, style.scss */
+header {
+  position: absolute;
+  width: 100vw; }
+  /* line 88, style.scss */
+  header img {
+    height: 70px; }
+  /* line 92, style.scss */
+  header img:first-of-type {
+    float: left;
+    margin: 20px 0 0 40px; }
+  /* line 97, style.scss */
+  header img:last-of-type {
+    float: right;
+    margin: 20px 60px 0 0; }
+
+/* line 102, style.scss */
+div.hero {
+  background: url(../img/hero.jpg) no-repeat center top fixed;
+  z-index: 0;
+  background-size: 100% 120%;
+  height: 640px;
+  width: 100vw; }
+
+/* line 113, style.scss */
+body h1, body h2 {
+  display: block;
+  text-align: center; }
+/* line 117, style.scss */
+body p {
+  display: block; }
+
+/* line 121, style.scss */
+#app {
+  margin: -175px 0px 0px; }
+  /* line 123, style.scss */
+  #app #links {
+    margin-bottom: 90px; }
+    /* line 125, style.scss */
+    #app #links ul.navbar {
+      display: block;
+      z-index: 5;
+      height: 75px;
+      width: 100vw;
+      background-color: #0f3458;
+      overflow-y: hidden; }
+      /* line 133, style.scss */
+      #app #links ul.navbar .menu {
+        display: none; }
+      /* line 137, style.scss */
+      #app #links ul.navbar li {
+        display: inline-block;
+        color: white;
+        height: 75px;
+        text-align: center;
+        margin: 0 28px;
+        padding: 22px 0 0;
+        font-size: 24px; }
+        /* line 141, style.scss */
+        #app #links ul.navbar li a {
+          height: 22px;
+          color: white; }
+      /* line 150, style.scss */
+      #app #links ul.navbar .navContainer li:hover {
+        cursor: pointer;
+        border-bottom: 4px solid #fff; }
+    /* line 155, style.scss */
+    #app #links .mobileNavContainer {
+      display: none; }
+    /* line 156, style.scss */
+    #app #links .navContainer {
+      width: 1190px;
+      height: 75px;
+      margin: 0 auto;
+      overflow-y: hidden; }
+      /* line 162, style.scss */
+      #app #links .navContainer .dropDown {
+        position: absolute;
+        left: 0;
+        display: none;
+        opacity: 1;
+        background-color: #0f3458;
+        height: 66px;
+        width: 100vw;
+        margin-top: 74px;
+        border-top: 1px solid black;
+        overflow-y: hidden; }
+        /* line 174, style.scss */
+        #app #links .navContainer .dropDown .dropContainer {
+          width: 1020px;
+          margin: 0 auto;
+          padding-top: 19px; }
+          /* line 179, style.scss */
+          #app #links .navContainer .dropDown .dropContainer li {
+            display: inline-block;
+            color: #fff;
+            font-size: 19px;
+            text-align: left;
+            margin: 0 10px;
+            padding: 0;
+            height: 46px;
+            font-weight: 100; }
+    /* line 193, style.scss */
+    #app #links .ticker {
+      height: 65px;
+      width: 100%;
+      text-align: center;
+      background-color: #0f6cb3; }
+      /* line 199, style.scss */
+      #app #links .ticker ul li {
+        z-index: -1;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 65px; }
+
+/* line 209, style.scss */
+.clock h1, .dialingCodes h1, .airportDelays h1, .currency h1, .weather h1 {
+  height: 60px;
+  padding-top: 16px;
+  margin-bottom: 20px;
+  background-color: #0f6cb3;
+  color: white;
+  font-weight: 100; }
+
+/* line 217, style.scss */
+.login {
+  position: fixed;
+  top: 20vh;
+  left: 25vw;
+  height: 350px;
+  width: 50vw;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #0f3458;
+  color: #fff; }
+  /* line 229, style.scss */
+  .login a, .login h1 {
+    color: white; }
+  /* line 231, style.scss */
+  .login .loginForm {
+    display: block;
+    width: 460px;
+    margin: 0 auto; }
+    /* line 236, style.scss */
+    .login .loginForm h1 {
+      margin-bottom: 20px; }
+    /* line 237, style.scss */
+    .login .loginForm input {
+      font-size: 24px;
+      margin: 10px 5px; }
+    /* line 242, style.scss */
+    .login .loginForm a {
+      position: absolute;
+      display: block;
+      width: 200px;
+      bottom: 30px;
+      text-align: center;
+      background: #3498db;
+      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+      border-radius: 5px;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none; }
+      /* line 262, style.scss */
+      .login .loginForm a:first-of-type {
+        left: 75px; }
+      /* line 263, style.scss */
+      .login .loginForm a:last-of-type {
+        right: 75px; }
+
+/* line 267, style.scss */
+.home {
+  max-width: 1500px;
+  margin: 0 auto; }
+  /* line 270, style.scss */
+  .home .homeHeader {
+    font-size: 46px;
+    font-weight: normal; }
+  /* line 275, style.scss */
+  .home .welcomeMessage {
+    font-size: 28px;
+    font-weight: 100;
+    width: 90%;
+    text-align: center;
+    margin: 40px auto 60px; }
+  /* line 283, style.scss */
+  .home .forms {
+    position: relative;
+    display: inline-block;
+    width: 64%;
+    margin: 0 2% 0 5%; }
+    /* line 289, style.scss */
+    .home .forms a {
+      display: inline-block;
+      position: relative;
+      padding: 20px;
+      margin-bottom: 1.3%;
+      width: 38%;
+      height: 280px;
+      overflow-y: hidden; }
+      /* line 298, style.scss */
+      .home .forms a h1 {
+        text-align: left;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: normal; }
+      /* line 305, style.scss */
+      .home .forms a p {
+        height: 60px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 100; }
+      /* line 312, style.scss */
+      .home .forms a img {
+        width: 100%;
+        height: 150px;
+        vertical-align: bottom;
+        overflow: hidden; }
+      /* line 319, style.scss */
+      .home .forms a:hover img {
+        width: 95%; }
+    /* line 325, style.scss */
+    .home .forms a:nth-child(3n-2) {
+      width: 60%; }
+    /* line 329, style.scss */
+    .home .forms a:nth-child(1) {
+      background-color: #939598;
+      margin-right: 1.3%; }
+    /* line 333, style.scss */
+    .home .forms a:nth-child(2) {
+      background-color: #d1d2d4; }
+      /* line 335, style.scss */
+      .home .forms a:nth-child(2) h1, .home .forms a:nth-child(2) p {
+        color: #58585a; }
+    /* line 337, style.scss */
+    .home .forms a:nth-child(3) {
+      background-color: #0f6cb3;
+      margin-right: 1.3%; }
+    /* line 341, style.scss */
+    .home .forms a:nth-child(4) {
+      background-color: #0f3458; }
+  /* line 345, style.scss */
+  .home .assistance {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 24%;
+    margin: 10px 1% 20px 0; }
+    /* line 352, style.scss */
+    .home .assistance .companyInfo {
+      margin-bottom: 40px;
+      padding: 40px 8px;
+      border: 2px solid black;
+      border-radius: 35px; }
+      /* line 357, style.scss */
+      .home .assistance .companyInfo h1 {
+        font-size: 26px;
+        margin-bottom: 30px; }
+      /* line 361, style.scss */
+      .home .assistance .companyInfo p {
+        font-size: 19px;
+        font-weight: lighter;
+        margin-bottom: 25px; }
+    /* line 368, style.scss */
+    .home .assistance .quickLinks {
+      display: inline-block;
+      width: 100%; }
+      /* line 371, style.scss */
+      .home .assistance .quickLinks a {
+        display: inline-block;
+        width: 46%;
+        margin: 2%;
+        height: 120px;
+        background-color: #d1d2d4;
+        text-transform: uppercase;
+        text-align: center;
+        border: 1px solid #0f3458; }
+        /* line 381, style.scss */
+        .home .assistance .quickLinks a img {
+          height: 50px;
+          margin: 20px 0 5px; }
+      /* line 386, style.scss */
+      .home .assistance .quickLinks a:hover {
+        border: 2px solid #0f3458;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0s;
+        -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+        -moz-transition-property: all;
+        -moz-transition-duration: 0s;
+        -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6); }
+
+/* line 400, style.scss */
+.manager h1 {
+  font-size: 46px;
+  font-weight: normal; }
+/* line 405, style.scss */
+.manager .managerTools {
+  position: relative;
+  display: block;
+  max-width: 960px;
+  margin: 20px auto 0; }
+  /* line 411, style.scss */
+  .manager .managerTools a {
+    display: inline-block;
+    background-color: #0f3458;
+    width: 48%;
+    margin: 20px 1%;
+    padding: 0 15px; }
+    /* line 417, style.scss */
+    .manager .managerTools a h1 {
+      font-size: 28px;
+      margin: 15px 0 10px;
+      color: white; }
+    /* line 422, style.scss */
+    .manager .managerTools a p {
+      font-size: 18px;
+      line-height: 27px;
+      color: white;
+      text-align: center; }
+    /* line 428, style.scss */
+    .manager .managerTools a img {
+      display: block;
+      max-height: 150px;
+      min-width: 80%;
+      margin: 20px auto; }
+    /* line 435, style.scss */
+    .manager .managerTools a:hover {
+      background-color: #0f6cb3; }
+
+/* line 441, style.scss */
+.flightSearch {
+  display: block;
+  height: 560px;
+  width: 380px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0f3458;
+  border-radius: 10px; }
+  /* line 450, style.scss */
+  .flightSearch h1 {
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  /* line 456, style.scss */
+  .flightSearch .codeHelp {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px; }
+    /* line 461, style.scss */
+    .flightSearch .codeHelp a {
+      color: #0f6cb3; }
+      /* line 464, style.scss */
+      .flightSearch .codeHelp a:hover {
+        color: #3BADF9; }
+  /* line 471, style.scss */
+  .flightSearch .form input {
+    border: 1px solid #ffb3b3; }
+  /* line 474, style.scss */
+  .flightSearch .form p {
+    color: white;
+    margin: 5px 0 15px 20px;
+    font-size: 18px; }
+    /* line 479, style.scss */
+    .flightSearch .form p input {
+      width: 94%;
+      height: 24px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 3px;
+      margin-top: 5px; }
+    /* line 488, style.scss */
+    .flightSearch .form p select {
+      width: 100%;
+      height: 100%;
+      font-size: 32px; }
+    /* line 493, style.scss */
+    .flightSearch .form p small {
+      color: red;
+      font-size: 16px;
+      margin-left: 10px; }
+  /* line 499, style.scss */
+  .flightSearch .form p:last-of-type input {
+    border: 1px solid #ccffcc; }
+  /* line 504, style.scss */
+  .flightSearch button {
+    display: block;
+    margin: 20px auto 0; }
+
+/* line 509, style.scss */
+.flightResultsDiv {
+  width: 760px;
+  margin: 10px auto; }
+  /* line 512, style.scss */
+  .flightResultsDiv .flightResults {
+    display: block;
+    min-height: 500px; }
+  /* line 517, style.scss */
+  .flightResultsDiv li {
+    border: 1px solid #58585a;
+    padding: 20px;
+    margin-bottom: 10px; }
+    /* line 522, style.scss */
+    .flightResultsDiv li h1 {
+      text-align: left; }
+    /* line 525, style.scss */
+    .flightResultsDiv li .status {
+      margin-bottom: 15px;
+      color: black; }
+    /* line 529, style.scss */
+    .flightResultsDiv li .codes {
+      font-size: 45px; }
+      /* line 532, style.scss */
+      .flightResultsDiv li .codes:first-of-type {
+        float: left; }
+      /* line 536, style.scss */
+      .flightResultsDiv li .codes:last-of-type {
+        float: right; }
+    /* line 540, style.scss */
+    .flightResultsDiv li img {
+      display: block;
+      height: 45px;
+      margin: 20px auto; }
+    /* line 545, style.scss */
+    .flightResultsDiv li .lined {
+      display: none;
+      opacity: 0; }
+    /* line 549, style.scss */
+    .flightResultsDiv li div {
+      display: inline-block;
+      margin-top: 13px;
+      width: 50%;
+      margin: 0; }
+      /* line 555, style.scss */
+      .flightResultsDiv li div h2 {
+        text-align: left; }
+      /* line 559, style.scss */
+      .flightResultsDiv li div .line {
+        width: 95%;
+        margin: 2px 0;
+        height: 1px;
+        background-color: #d1d2d4; }
+      /* line 565, style.scss */
+      .flightResultsDiv li div table {
+        width: 100%; }
+        /* line 568, style.scss */
+        .flightResultsDiv li div table tbody {
+          font-size: 28px;
+          color: black; }
+
+/* line 578, style.scss */
+.dialingCodes .dialingInstructions {
+  display: block;
+  max-width: 850px;
+  margin: 0 auto 20px; }
+  /* line 582, style.scss */
+  .dialingCodes .dialingInstructions h2 {
+    font-size: 18px;
+    text-align: left;
+    text-transform: underline; }
+  /* line 587, style.scss */
+  .dialingCodes .dialingInstructions p {
+    text-align: left;
+    margin-bottom: 20px; }
+/* line 593, style.scss */
+.dialingCodes table {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left; }
+  /* line 601, style.scss */
+  .dialingCodes table tbody tr:nth-child(2n-1) {
+    background-color: #e6e6ff; }
+  /* line 604, style.scss */
+  .dialingCodes table tbody tr td {
+    width: 15%; }
+  /* line 607, style.scss */
+  .dialingCodes table tbody tr td:first-of-type {
+    width: 25%; }
+  /* line 610, style.scss */
+  .dialingCodes table tbody tr td:last-of-type {
+    width: 12%; }
+  /* line 613, style.scss */
+  .dialingCodes table tbody tr:hover td {
+    font-weight: bold; }
+
+/* line 620, style.scss */
+.weather {
+  position: relative;
+  display: block;
+  max-width: 980px;
+  margin: 0 auto; }
+  /* line 626, style.scss */
+  .weather .divContainer {
+    display: block;
+    width: 465px;
+    margin: 0 auto 30px; }
+    /* line 630, style.scss */
+    .weather .divContainer div {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 20px; }
+      /* line 637, style.scss */
+      .weather .divContainer div input {
+        top: 0;
+        line-height: 46px;
+        margin-left: 20px;
+        font-size: 28px; }
+  /* line 645, style.scss */
+  .weather button {
+    display: block;
+    margin: 0 auto; }
+  /* line 649, style.scss */
+  .weather .weatherResults {
+    display: block;
+    width: 100%;
+    margin: 70px auto 0; }
+    /* line 654, style.scss */
+    .weather .weatherResults li {
+      position: relative;
+      display: inline-block;
+      width: 32.33%;
+      height: 200px;
+      margin: 0 .5%;
+      padding: 20px 10px;
+      background-color: #0f3458;
+      border-radius: 10px; }
+      /* line 664, style.scss */
+      .weather .weatherResults li .title {
+        display: block;
+        margin: 0 auto;
+        text-align: center; }
+        /* line 669, style.scss */
+        .weather .weatherResults li .title b {
+          display: block;
+          font-size: 18px;
+          font-weight: bold;
+          color: white;
+          text-transform: underline; }
+        /* line 677, style.scss */
+        .weather .weatherResults li .title small {
+          display: inline-block;
+          color: white;
+          margin-bottom: 10px; }
+          /* line 682, style.scss */
+          .weather .weatherResults li .title small:first-of-type {
+            padding-right: 5px; }
+      /* line 688, style.scss */
+      .weather .weatherResults li .temps {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        height: 69px; }
+        /* line 694, style.scss */
+        .weather .weatherResults li .temps p {
+          font-size: 18px; }
+      /* line 699, style.scss */
+      .weather .weatherResults li .summary {
+        display: inline-block;
+        text-align: center;
+        width: 50%; }
+        /* line 704, style.scss */
+        .weather .weatherResults li .summary img {
+          display: block;
+          margin: 0 auto; }
+      /* line 711, style.scss */
+      .weather .weatherResults li p {
+        margin: 5px 0px;
+        font-size: 14px;
+        color: white; }
+
+/* line 720, style.scss */
+.baggageContainer {
+  position: relative;
+  display: block;
+  max-width: 890px;
+  margin: 0 auto; }
+  /* line 726, style.scss */
+  .baggageContainer div {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    height: 190px;
+    margin: 20px 1.5%; }
+    /* line 733, style.scss */
+    .baggageContainer div img {
+      display: block;
+      max-height: 75px;
+      max-width: 100%;
+      margin: 0 auto; }
+    /* line 739, style.scss */
+    .baggageContainer div p {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      bottom: 80px;
+      margin: 0 75px; }
+    /* line 746, style.scss */
+    .baggageContainer div a {
+      display: block;
+      outline: none;
+      background: #3498db;
+      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+      border: none;
+      border-radius: 5px;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 14px;
+      text-align: center;
+      padding: 5px 10px 5px 10px;
+      margin: 10px 55px;
+      width: 58%;
+      text-decoration: none; }
+    /* line 768, style.scss */
+    .baggageContainer div a:first-of-type {
+      position: absolute;
+      bottom: 30px; }
+    /* line 772, style.scss */
+    .baggageContainer div a:last-of-type {
+      position: absolute;
+      bottom: 0px; }
+    /* line 776, style.scss */
+    .baggageContainer div a:hover {
+      cursor: pointer;
+      background: #3cb0fd;
+      background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+      text-decoration: none; }
+
+/* line 789, style.scss */
+.airportDelays li {
+  display: block;
+  width: 890px;
+  margin: 30px auto; }
+  /* line 793, style.scss */
+  .airportDelays li p, .airportDelays li b {
+    display: block;
+    text-align: center; }
+  /* line 797, style.scss */
+  .airportDelays li h2 {
+    font-size: 18px; }
+  /* line 800, style.scss */
+  .airportDelays li div {
+    display: inline-block;
+    position: relative;
+    width: 23%; }
+
+/* line 807, style.scss */
+.clock {
+  display: block;
+  max-width: 100%; }
+  /* line 811, style.scss */
+  .clock h1 {
+    height: 60px;
+    padding-top: 16px;
+    margin-bottom: 20px;
+    background-color: #0f6cb3;
+    color: white;
+    font-weight: 100; }
+  /* line 819, style.scss */
+  .clock form {
+    margin-bottom: 30px; }
+  /* line 823, style.scss */
+  .clock .clockResponse {
+    display: block;
+    width: 890px;
+    margin: 0 auto;
+    text-align: center; }
+    /* line 829, style.scss */
+    .clock .clockResponse p {
+      font-size: 72px;
+      font-weight: bold; }
+    /* line 833, style.scss */
+    .clock .clockResponse span {
+      display: block;
+      font-size: 42px;
+      margin-top: 20px; }
+
+/* line 841, style.scss */
+.currency {
+  display: block;
+  max-width: 350px;
+  margin: 0 auto; }
+  /* line 846, style.scss */
+  .currency b {
+    float: right;
+    font-size: 24px; }
+  /* line 851, style.scss */
+  .currency h2 {
+    text-align: left; }
+  /* line 854, style.scss */
+  .currency select {
+    border: 1px solid #111;
+    background: transparent;
+    width: 46px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+  /* line 866, style.scss */
+  .currency input {
+    border: 1px solid #111;
+    background: transparent;
+    float: right;
+    width: 63px;
+    margin-right: 5px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px; }
+  /* line 877, style.scss */
+  .currency button {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 4px 0 0 2px; }
+    /* line 885, style.scss */
+    .currency button img {
+      height: 32px; }
+
+/* line 890, style.scss */
+.passportInfo {
+  display: block;
+  max-width: 890px;
+  margin: 0 auto; }
+  /* line 895, style.scss */
+  .passportInfo h1 {
+    font-size: 36px;
+    background-color: #0f6cb3;
+    width: 100%;
+    height: 60px;
+    padding-top: 9px;
+    color: white; }
+  /* line 904, style.scss */
+  .passportInfo p {
+    display: block;
+    font-size: 20px;
+    margin: 20px auto;
+    max-width: 700px; }
+  /* line 911, style.scss */
+  .passportInfo button {
+    display: block;
+    margin: 0 auto 30px; }
+    /* line 915, style.scss */
+    .passportInfo button a {
+      color: white; }
+  /* line 919, style.scss */
+  .passportInfo div {
+    display: inline-block;
+    width: 46%;
+    margin: 10px 2%;
+    vertical-align: top; }
+    /* line 924, style.scss */
+    .passportInfo div h2 {
+      margin-bottom: 20px; }
+    /* line 927, style.scss */
+    .passportInfo div ul li {
+      list-style-type: circle;
+      padding-left: 10px;
+      margin: 10px auto; }
+    /* line 933, style.scss */
+    .passportInfo div ul, .passportInfo div table {
+      margin-top: 20px; }
+    /* line 936, style.scss */
+    .passportInfo div b {
+      display: block;
+      margin-bottom: 5px; }
+    /* line 941, style.scss */
+    .passportInfo div table {
+      text-align: center; }
+      /* line 944, style.scss */
+      .passportInfo div table tr {
+        margin-bottom: 5px;
+        height: 35px; }
+        /* line 948, style.scss */
+        .passportInfo div table tr:first-of-type {
+          background-color: #0f3458; }
+        /* line 951, style.scss */
+        .passportInfo div table tr:last-of-type {
+          background-color: #F2F2F2; }
+      /* line 956, style.scss */
+      .passportInfo div table th {
+        color: white;
+        padding: 0 3px; }
+    /* line 961, style.scss */
+    .passportInfo div p {
+      text-align: center; }
+    /* line 964, style.scss */
+    .passportInfo div a {
+      color: #0f6cb3; }
+      /* line 967, style.scss */
+      .passportInfo div a:hover {
+        color: blue; }
+
+/* line 973, style.scss */
+.news {
+  position: relative;
+  display: block;
+  max-width: 890px;
+  margin: 0 auto; }
+  /* line 979, style.scss */
+  .news h1 {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 32px;
+    background-color: #0f6cb3;
+    color: white;
+    padding-top: 11px;
+    margin-bottom: 20px; }
+  /* line 989, style.scss */
+  .news p {
+    text-align: left; }
+  /* line 992, style.scss */
+  .news a {
+    color: #0f6cb3; }
+  /* line 996, style.scss */
+  .news .newsStory {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: 325px;
+    padding: 15px 5px;
+    vertical-align: top;
+    margin: 10px 2.5%;
+    border: 1px solid black;
+    background-color: #F8F8FF; }
+    /* line 1007, style.scss */
+    .news .newsStory p:first-of-type {
+      font-size: 14px;
+      border-bottom: 1px solid #0f3458;
+      margin: 5px auto 10px; }
+    /* line 1012, style.scss */
+    .news .newsStory p:last-of-type {
+      font-size: 18px; }
+    /* line 1015, style.scss */
+    .news .newsStory a {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      display: block;
+      color: #fff;
+      width: 170px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 10px;
+      margin-top: 10px;
+      background-color: #0f3458;
+      text-align: center; }
+      /* line 1029, style.scss */
+      .news .newsStory a:hover {
+        opacity: .7; }
+
+/* line 1036, style.scss */
+.guide iframe {
+  display: block;
+  margin: 0 auto; }
+
+/* line 1040, style.scss */
+.resources {
+  position: relative;
+  display: block;
+  width: 100vw;
+  margin: 0 auto; }
+  /* line 1046, style.scss */
+  .resources h1.title {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+    font-size: 36px;
+    background-color: #0f3458;
+    color: white; }
+  /* line 1056, style.scss */
+  .resources a {
+    display: block;
+    width: 40%;
+    margin: 3% auto;
+    text-align: left;
+    border-bottom: 1px solid #0f3458; }
+    /* line 1063, style.scss */
+    .resources a h1 {
+      text-align: left; }
+  /* line 1068, style.scss */
+  .resources a:hover h1 {
+    color: #0f6cb3;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .4s;
+    -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+    -moz-transition-property: all;
+    -moz-transition-duration: .4s;
+    -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6); }
+
+/* line 1080, style.scss */
+footer {
+  background-color: #d1d2d4;
+  height: 150px;
+  width: 100vw;
+  padding: 30px 40px;
+  margin-top: 160px;
+  overflow-y: hidden; }
+  /* line 1088, style.scss */
+  footer .footContainer {
+    text-align: center; }
+    /* line 1091, style.scss */
+    footer .footContainer ul {
+      display: inline-block;
+      margin: 0 80px; }
+      /* line 1095, style.scss */
+      footer .footContainer ul li {
+        text-align: left;
+        margin: 10px 0; }
+        /* line 1098, style.scss */
+        footer .footContainer ul li a {
+          color: #58585a; }
+      /* line 1101, style.scss */
+      footer .footContainer ul li:hover a {
+        color: #fff; }
+
+@media all and (max-width: 1110px) {
+  /* line 1112, style.scss */
+  #app #links ul.navbar .navContainer {
+    width: 905px;
+    padding-top: 7px;
+    margin: 0 auto; }
+    /* line 1117, style.scss */
+    #app #links ul.navbar .navContainer li {
+      height: 67px; }
+    /* line 1120, style.scss */
+    #app #links ul.navbar .navContainer li, #app #links ul.navbar .navContainer li a {
+      font-size: 16px; }
+    /* line 1124, style.scss */
+    #app #links ul.navbar .navContainer .dropDown {
+      margin-top: 68px; }
+  /* line 1128, style.scss */
+  #app #links ul.navbar .dropDown .dropContainer {
+    width: 800px;
+    padding-top: 24px; }
+    /* line 1132, style.scss */
+    #app #links ul.navbar .dropDown .dropContainer li {
+      font-size: 14px;
+      height: 42px; }
+  /* line 1139, style.scss */
+  #app #links .ticker ul li {
+    font-size: 14px; }
+
+  /* line 1144, style.scss */
+  .home .main .forms, .home .main .assistance {
+    display: block;
+    width: 90%;
+    margin: 0 auto; }
+  /* line 1149, style.scss */
+  .home .main .assistance {
+    text-align: center; }
+
+  /* line 1154, style.scss */
+  .weather .divContainer {
+    width: 100vw; }
+    /* line 1156, style.scss */
+    .weather .divContainer div {
+      display: block;
+      width: 99%;
+      margin: 25px auto;
+      font-size: 24px; }
+      /* line 1162, style.scss */
+      .weather .divContainer div input {
+        width: 170px;
+        line-height: 41px; }
+  /* line 1169, style.scss */
+  .weather .weatherResults li {
+    display: block;
+    margin: 0 auto 20px;
+    height: auto;
+    width: 80vw; }
+    /* line 1176, style.scss */
+    .weather .weatherResults li .title b {
+      font-size: 26px; }
+    /* line 1181, style.scss */
+    .weather .weatherResults li .temps {
+      display: inline-block;
+      height: 78px; }
+      /* line 1185, style.scss */
+      .weather .weatherResults li .temps p {
+        font-size: 22px; }
+    /* line 1190, style.scss */
+    .weather .weatherResults li .summary {
+      display: inline-block; }
+      /* line 1193, style.scss */
+      .weather .weatherResults li .summary p {
+        font-size: 25px; } }
+@media all and (max-width: 880px) {
+  /* line 1208, style.scss */
+  div.hero {
+    height: 500px; }
+
+  /* line 1211, style.scss */
+  #app {
+    margin: -155px 0px 0px; }
+    /* line 1213, style.scss */
+    #app #links ul.navbar:hover {
+      cursor: pointer; }
+    /* line 1216, style.scss */
+    #app #links ul.navbar {
+      height: 75px; }
+      /* line 1219, style.scss */
+      #app #links ul.navbar .navContainer {
+        display: none; }
+      /* line 1222, style.scss */
+      #app #links ul.navbar .mobileNavContainer {
+        display: block;
+        height: 100%;
+        width: 98%;
+        padding-top: 7px;
+        margin: 0 auto;
+        overflow-y: hidden; }
+        /* line 1230, style.scss */
+        #app #links ul.navbar .mobileNavContainer .menu {
+          display: block;
+          width: 100%;
+          text-align: center;
+          height: 75px;
+          padding-top: 15px;
+          font-size: 22px;
+          font-weight: 100;
+          margin: 0; }
+          /* line 1240, style.scss */
+          #app #links ul.navbar .mobileNavContainer .menu span {
+            color: #fff; }
+        /* line 1243, style.scss */
+        #app #links ul.navbar .mobileNavContainer li {
+          display: inline-block;
+          color: white;
+          height: 40px;
+          width: 48%;
+          margin: 10px 1%;
+          text-align: center;
+          padding: 0;
+          font-size: 22px; }
+          /* line 1249, style.scss */
+          #app #links ul.navbar .mobileNavContainer li a {
+            height: 40px;
+            color: white; }
+      /* line 1258, style.scss */
+      #app #links ul.navbar .dropDown .dropContainer {
+        height: 115px;
+        width: 500px;
+        padding-top: 16px; }
+        /* line 1263, style.scss */
+        #app #links ul.navbar .dropDown .dropContainer li {
+          font-size: 14px;
+          height: 42px;
+          width: 100%;
+          text-align: center; }
+    /* line 1272, style.scss */
+    #app .ticker {
+      display: none; }
+
+  /* line 1279, style.scss */
+  .home .main .forms a {
+    display: block;
+    width: 90%;
+    margin: 10px auto; }
+
+  /* line 1286, style.scss */
+  .guide iframe {
+    width: 95vw; }
+
+  /* line 1289, style.scss */
+  .news {
+    width: 90%; }
+
+  /* line 1292, style.scss */
+  .manager .managerTools {
+    width: 95vw; }
+    /* line 1295, style.scss */
+    .manager .managerTools a {
+      display: block;
+      width: 100%; }
+      /* line 1299, style.scss */
+      .manager .managerTools a img {
+        min-width: 250px; }
+
+  /* line 1305, style.scss */
+  .news .newsStory {
+    display: block;
+    margin: 10px auto;
+    width: 95%; }
+    /* line 1310, style.scss */
+    .news .newsStory:nth-child(4n) {
+      width: 95%; }
+    /* line 1313, style.scss */
+    .news .newsStory:nth-child(4n-3) {
+      width: 95%; }
+    /* line 1317, style.scss */
+    .news .newsStory a {
+      float: right;
+      margin-right: 10px; }
+
+  /* line 1324, style.scss */
+  .clock div {
+    font-size: 27px; }
+  /* line 1327, style.scss */
+  .clock .clockResponse {
+    width: 500px; }
+    /* line 1329, style.scss */
+    .clock .clockResponse p {
+      font-size: 36px; }
+
+  /* line 1334, style.scss */
+  .baggageContainer {
+    max-width: 95%; }
+    /* line 1337, style.scss */
+    .baggageContainer div {
+      width: 97%;
+      height: 190px;
+      margin: 20px 1.5%; }
+      /* line 1342, style.scss */
+      .baggageContainer div p {
+        position: absolute;
+        text-align: center;
+        display: block;
+        width: 100%;
+        bottom: 80px;
+        margin: 0px auto; }
+      /* line 1351, style.scss */
+      .baggageContainer div a {
+        width: 100%;
+        margin: 10px auto; }
+
+  /* line 1357, style.scss */
+  .flightSearch {
+    margin: 20px auto; }
+
+  /* line 1360, style.scss */
+  .flightResultsDiv {
+    width: 98%; }
+    /* line 1364, style.scss */
+    .flightResultsDiv .flightResults img {
+      display: none; }
+    /* line 1369, style.scss */
+    .flightResultsDiv .flightResults div h2 {
+      font-size: 16px; }
+    /* line 1373, style.scss */
+    .flightResultsDiv .flightResults .lined {
+      display: block;
+      width: 100%;
+      height: 10px; }
+    /* line 1378, style.scss */
+    .flightResultsDiv .flightResults div:last-of-type h2 {
+      text-align: right; }
+    /* line 1379, style.scss */
+    .flightResultsDiv .flightResults thead th:nth-child(2) {
+      display: none; }
+    /* line 1380, style.scss */
+    .flightResultsDiv .flightResults tbody {
+      font-size: 16px; }
+      /* line 1383, style.scss */
+      .flightResultsDiv .flightResults tbody td:nth-child(2) {
+        display: none; }
+
+  /* line 1389, style.scss */
+  .airportDelays li {
+    display: block;
+    width: 99vw; }
+    /* line 1393, style.scss */
+    .airportDelays li h1 {
+      margin-top: 20px;
+      font-size: 20px; }
+    /* line 1397, style.scss */
+    .airportDelays li div {
+      margin-top: 20px;
+      margin-left: 1%; }
+
+  /* line 1402, style.scss */
+  footer {
+    background-color: #d1d2d4;
+    height: 150px;
+    width: 100vw;
+    padding: 30px 40px;
+    margin-top: 160px; }
+    /* line 1409, style.scss */
+    footer .footContainer {
+      text-align: center; }
+      /* line 1412, style.scss */
+      footer .footContainer ul {
+        display: block;
+        width: 500px;
+        margin: 0 auto; }
+        /* line 1417, style.scss */
+        footer .footContainer ul li {
+          display: inline-block;
+          width: 140px;
+          margin: 5px 0; } }
+@media all and (max-width: 550px) {
+  /* line 1428, style.scss */
+  header img {
+    height: 35px; }
+  /* line 1432, style.scss */
+  header img:first-of-type {
+    float: left;
+    margin: 20px 0 0 20px; }
+  /* line 1437, style.scss */
+  header img:last-of-type {
+    float: right;
+    margin: 20px 40px 0 0; }
+
+  /* line 1442, style.scss */
+  #app #links ul.navbar:hover {
+    height: 800px; }
+
+  /* line 1445, style.scss */
+  #app #links ul.navbar .mobileNavContainer li {
+    width: 100%; }
+
+  /* line 1449, style.scss */
+  .home .homeHeader {
+    font-size: 26px; }
+  /* line 1452, style.scss */
+  .home .welcomeMessage {
+    font-size: 20px; }
+  /* line 1456, style.scss */
+  .home .main .forms a {
+    display: block;
+    height: 305px;
+    width: 90%;
+    margin: 10px auto; }
+
+  /* line 1464, style.scss */
+  .flightSearch {
+    width: 97%;
+    height: auto; }
+
+  /* line 1473, style.scss */
+  .clock div {
+    font-size: 24px; }
+  /* line 1476, style.scss */
+  .clock .clockResponse {
+    width: 100vw;
+    text-align: center; }
+    /* line 1479, style.scss */
+    .clock .clockResponse p {
+      font-size: 28px; }
+
+  /* line 1485, style.scss */
+  .passportInfo h1 {
+    margin: 10px auto 20px; }
+  /* line 1488, style.scss */
+  .passportInfo div {
+    display: block;
+    margin: 5px auto 20px;
+    width: auto;
+    padding: 0 20px; }
+
+  /* line 1496, style.scss */
+  .weather .divContainer {
+    width: 100vw; }
+    /* line 1498, style.scss */
+    .weather .divContainer div {
+      display: block;
+      width: 99%;
+      margin: 25px auto;
+      font-size: 24px; }
+      /* line 1504, style.scss */
+      .weather .divContainer div input {
+        width: 170px;
+        line-height: 41px; }
+  /* line 1512, style.scss */
+  .weather .weatherResults li .title b {
+    font-size: 19px; }
+  /* line 1516, style.scss */
+  .weather .weatherResults li .temps {
+    display: block;
+    margin: 15px auto 5px;
+    width: auto;
+    height: auto; }
+  /* line 1523, style.scss */
+  .weather .weatherResults li .summary {
+    display: block;
+    margin: 0px auto 5px;
+    width: auto;
+    height: auto; }
+
+  /* line 1532, style.scss */
+  footer {
+    background-color: #d1d2d4;
+    height: 130px;
+    width: 100vw;
+    padding: 10px 5px;
+    margin-top: 160px; }
+    /* line 1539, style.scss */
+    footer .footContainer {
+      position: relative;
+      text-align: center; }
+      /* line 1543, style.scss */
+      footer .footContainer ul {
+        display: block;
+        width: 100%;
+        margin: 0 auto; }
+        /* line 1548, style.scss */
+        footer .footContainer ul li {
+          display: inline-block;
+          width: 20%;
+          margin: 5px 2%;
+          font-size: 12px; } }
+
+/*# sourceMappingURL=style.css.map */

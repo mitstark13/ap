@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<title>Admin Portal</title>
+</head>
+<body>
+	<header>
+		<img src="img/altourLogo.png" alt="ALTOUR">
+		<ul class='nav'>
+			<li class='portalsNav'>Portals</li>
+			<li class='usersNav'>Users</li>
+		</ul>
+		<button><a href="create-portal.html">Create a portal</a></button>
+	</header>
+	<section class='welcome'>
+		<h1>Welcome to the Altour admin portal</h1>
+		<p>Here you can create, edit, or delete portals and users.</p>
+	</section>
+	<section class="portals">
+		<h2>Portals</h2>
+		<button><a href="create-portal.html">Create a portal</a></button>
+		<table id='portalsTable'>
+			<tbody id='portalTable'>
+			<tr>
+				<th>Portal #</th>
+				<th>Logo</th>
+				<th>Name</th>
+				<th>CNAME</th>
+				<th>Status</th>
+				<th>Actions</th>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class='users'>
+		<h2>Users</h2>
+		<table id='usersTable'>
+			<tr>
+				<th>User #</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Status</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Mitchell Starkey</td>
+				<td>mstarkey@swifttrip.com</td>
+				<td>Super Administrator</td>
+			</tr>
+		</table>
+	</section>
+	<footer>© 2016 ALTOUR</footer>
+	<script src='js/portals.js'></script>
+</body>
+</html>

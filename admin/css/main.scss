@@ -1,0 +1,166 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-family: 'Arial Unicode', sans-serif;
+}
+
+header {
+	height: 80px;
+	width: 100vw;
+	margin: 0;
+	padding: 10px 20px;
+	background-color: #002967;
+	color: white;
+
+	img {
+		display: inline-block;
+		height: 60px;
+	}
+
+	ul {
+		display: inline-block;
+		position: absolute;
+		margin-left: 35px;
+		top: 34px;
+
+		li {
+			display: inline;
+			text-decoration: none;
+			margin-right: 18px;
+
+			&:hover {
+				cursor: pointer;
+				border-bottom: 1px solid white;
+			}
+
+			.active {
+				border-bottom: 1px solid white;
+			}
+		}
+	}
+
+	button {
+		position: absolute;
+		display: inline-block;
+		background-color: green;
+		height: 40px;
+		width: 130px;
+		font-size: 16px;
+		color: white;
+		border: none;
+		top: 20px;
+		right: 40px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+}
+
+h2 {
+	display: inline-block;
+    margin-left: 47%;
+    font-size: 28px;
+}
+
+.welcome {
+	height: 200px;
+	padding: 50px 0px;
+	text-align: center;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 32px;
+	}
+}
+
+.portals {
+	display: block;
+	margin-bottom: 60px;
+
+	button {
+		background-color: green;
+		height: 40px;
+		width: 130px;
+		font-size: 16px;
+		color: white;
+		border: none;
+		float: right;
+		margin-right: 5%;
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+
+	img {
+		max-width: 400px;
+		max-height: 200px;
+	}
+
+	td:nth-child(even) {
+		background-color: #F2F2F2;
+	}
+
+	table {
+		width: 90%;
+		text-align: center;
+		margin: 20px auto;
+		
+		tr:first-of-type {
+			background-color: #002967;
+			color: white;
+		}
+
+		.actions img {
+			display: inline;
+			height: 30px;
+			width: auto;
+
+			&:nth-child(2) {
+				margin: 0 5px;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.users {
+
+	table{
+		width: 90%;
+		text-align: center;
+		margin: 20px auto;
+
+		tr:first-of-type {
+			background-color: #002967;
+			color: white;
+		}
+
+		tr:nth-child(even) {
+		background-color: #F2F2F2;
+	}
+	}
+}
+
+footer {
+	height: 40px;
+	width: 100vw;
+	background-color: #DCDBDB;
+	text-align: center;
+	padding: 8px;
+}
+
+

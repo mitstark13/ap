@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/admin.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<title>Create Portal</title>
+</head>
+<body>
+<header>
+	Create your portal
+</header>
+	<div class="addPortal">
+	<form id='createPortalForm'>
+		<small>* Required</small><br>
+		<h2>Portal Name<span>*</span></h2>
+		<input type="text" name="name"><br>
+
+		<input type="hidden" name="companyId" value=1><br>
+
+		<h2>CNAME<span>*</span></h2>
+		<input type="text" name="cname">.altourportal.com<br>
+
+		<h2>Company Name<span>*</span></h2>
+		<input type="text" name="companyName"><br>
+
+		<h2>Logo<span>*</span></h2>
+		<input id="image-file" type="file" name="image"/>(.jpg, .jpeg, or .png)<br>
+
+		<h2>Welcome Paragraph<span>*</span></h2>
+		<textarea rows="6" cols="40" name='welcomeMessage'>Welcome your visiters to the travel portal.</textarea><br>
+
+		<h2>Assistance information<span>*</span></h2>
+		<textarea rows="6" cols="40" name='assistanceInfo'>Need help? Contact John Smith at 555-5555 or jsmith@portal.com</textarea><br>
+		</form>
+
+		<div class='homepageForms'>
+			<h1>Homepage Forms</h1>
+			<form id="form">
+				<h2>Form Name</h2>
+				<input type="text" name="title"><br>
+				<h2>Form Description</h2>
+				<input type="text" name="description"><br>
+				<h2>Link to Form</h2>
+				<input type="text" name="link"><br>
+			</form>
+			<form id="form">
+				<h2>Form Name</h2>
+				<input type="text" name="title"><br>
+				<h2>Form Description</h2>
+				<input type="text" name="description"><br>
+				<h2>Link to Form</h2>
+				<input type="text" name="link"><br>
+			</form>
+			<form id="form">
+				<h2>Form Name</h2>
+				<input type="text" name="title"><br>
+				<h2>Form Description</h2>
+				<input type="text" name="description"><br>
+				<h2>Link to Form</h2>
+				<input type="text" name="link"><br>
+			</form>
+			<form id="form">
+				<h2>Form Name</h2>
+				<input type="text" name="title"><br>
+				<h2>Form Description</h2>
+				<input type="text" name="description"><br>
+				<h2>Link to Form</h2>
+				<input type="text" name="link"><br>
+			</form>
+		</div>
+
+		<h1>Manager Links</h1>
+		<div class='managerLinks css'>
+			<h2>Link to Human Resources</h2>
+			<input type="text" name="link"><br>
+			<h2>Link to Reporting</h2>
+			<input type="text" name="link"><br>
+			<h2>Link to Preferred Suppliers</h2>
+			<input type="text" name="link"><br>
+			<h2>Link to Expense Reporting</h2>
+			<input type="text" name="link"><br>
+			<h2>Link to Benchmarking</h2>
+			<input type="text" name="link"><br>
+		</div>
+
+		<h1>Additional Travel Links</h1>
+		<div class='additionalLinks css'>
+			<div>
+				<h2>Title</h2>
+				<input type="text" name="title"><br>
+				<h2>Link</h2>
+				<input type="text" name="link"><br>
+			</div>
+			<button>+ Link</button>
+		</div>
+	</form>
+	<div class='portalActions'>
+		<button class='createPortal' form="createPortalForm" type='submit' value="Submit">Create Portal!</button>
+		<a href="index.html"><button class='cancel'>Cancel</button></a>
+	</div>
+	</div>
+</body>
+<script type='text/javascript'>
+
+	$('.additionalLinks button').on('click', function(e) {
+		e.preventDefault;
+
+		var additionalLink = "<div><h2>Title</h2><input type='text' name='title'><br><h2>Link</h2><input type='text' name='link'><br></div>"
+
+		$(this).before(additionalLink)
+	})
+
+	let idOfNextPortal = 1;
+	let idOfNextImg = 1;
+	let idOfNextLink = 1;
+	let idOfNextImage = 1;
+	let logo = '';
+
+
+	$.ajax({
+		url: 'http://10.200.22.119:1337/count',
+		type: 'GET',
+		success: function(data) {
+			if (data.imageIdCount) {idOfNextImg = data.imageIdCount + 1;}
+			if (data.linkIdCount) {idOfNextLink = data.linkIdCount + 1;}
+			if (data.portalIdCount) {idOfNextPortal = data.portalIdCount + 1;}
+			console.log('Portal: ' + idOfNextPortal + '. Link: ' + idOfNextLink + '. Img: ' + idOfNextImg)
+		}
+	})
+
+	function EL(id) { return document.getElementById(id); } // Get el by ID helper function
+	var imageByte = '';
+	var imageForm;
+	var imageBlob;
+
+	function readFile() {
+	  if (this.files && this.files[0]) {
+	    var FR= new FileReader();
+	    FR.onload = function(e) {
+	   	    imageByte = e.target.result
+	   	    imageByte = imageByte.split(',')[1];
+	   	    console.log("byte= " + imageByte)
+		}
+
+	    };       
+	    FR.readAsDataURL( this.files[0] );
+	}
+	EL("image-file").addEventListener("change", readFile, false);
+
+	$('#createPortalForm').on("submit", function(e) {
+		e.preventDefault()
+		console.log($('#createPortalForm').serialize());
+		$.ajax({
+		  type: "POST",
+		  url: 'http://10.200.22.119:1337/portal',
+		  data: $('#createPortalForm').serialize(),
+		  success: function() {
+		  	console.log('Created portal!')
+			$.ajax({
+			    url : 'http://10.200.22.119:1337/image',
+			    type : 'POST',
+			    data: "image=" + imageByte,
+			    success : function(data) {
+			    console.log(data.info[0])
+			    idOfNextImg = data.info[0].split('#')[1]
+			  	console.log('Created Logo!')
+				$('.homepageForms #form').each(function( index ) {
+					$.ajax({
+					  type: "POST",
+					  url: 'http://10.200.22.119:1337/link',
+					  data: $(this).serialize(),
+					  success: function(data) {
+					  	console.log('Created Link!')
+					  	$.ajax({
+						  type: "POST",
+						  url: 'http://10.200.22.119:1337/portalLink?portalId=' + idOfNextPortal + '&linkId=' + data.info[0].split('#')[1] + '&imageId=' + idOfNextImg,
+						  success: function(data) {
+						  	console.log('Created portalLink!')
+						  }
+						})
+					  }
+					})
+				})
+				$('.managerLinks input').each(function(index) {
+					if ($(this).val().length > 2) {
+						let link = $(this).val();
+						$.ajax({
+						  type: "POST",
+						  url: 'http://10.200.22.119:1337/link',
+						  data: $(this).serialize(),
+						  success: function(data) {
+						  	console.log('Created Link!')
+						  	index++;
+						  	console.log('index= ' + index)
+						  	$.ajax({
+							  type: "POST",
+							  url: 'http://10.200.22.119:1337/portalLink?portalId=' + idOfNextPortal + '&linkId=' + data.info[0].split('#')[1] + '&linkTypeId=' + index + '&imageId=' + idOfNextImg,
+							  success: function(data) {
+							  	console.log('Created portalLink!')
+							  }
+							})
+						  }
+						})
+					}
+				})
+				$('.additionalLinks div').each(function(index) {
+					let title = $(this).find("input[name='title']").val()
+					let link = $(this).find("input[name='link']").val()
+
+					if ($(this).find("input[name='title']").val().length > 1) {
+						$.ajax({
+						  type: "POST",
+						  url: 'http://10.200.22.119:1337/link?title=' + title + '&link=' + link,
+						  success: function(data) {
+						  	console.log('Created Link!')
+						  	index++;
+						  	$.ajax({
+							  type: "POST",
+							  url: 'http://10.200.22.119:1337/portalLink?portalId=' + idOfNextPortal + '&linkId=' + data.info[0].split('#')[1] + '&linkTypeId=6' + '&imageId=' + idOfNextImg,
+							  success: function(data) {
+							  	console.log('Created extra portalLink!')
+							  }
+							})
+						  }
+					 	})
+					}
+				})
+			  }
+			})
+		  }
+		})
+	})
+
+</script>
+</html>

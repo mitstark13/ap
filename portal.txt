@@ -1,0 +1,140 @@
+Notes:
+	- Company, LinkType, and Portal tables already have some entries
+	- If bad input is found, the status code will be 400 and some readable message will be output
+		- Very few bad input checks are done
+	- If the server screws up the status code will be 500 and a generic message will be output
+
+/company
+
+	POST
+		Create a company, returns some readable message information.
+		Must specify `name` as a URL parameter: ?name=This%20is%20Altour
+
+	GET
+		Get a list of companies, returns a JSON encoded version of the database objects.
+		Optionally specify `id` and/or `name` as URL parameters to narrow search:
+			- ?id=1
+			- ?name=This%20is%20Altour
+
+	PUT
+		Update all companies that match criteria, returns some readable message information.
+		Must specify a `newName` URL parameter: ?newName=Altour
+		Must specify at least one of `id` or `oldName` so every company name isn't overwritten accidentally.
+			- &id=1
+			- &oldName=This%20is%20Altour
+
+	DELETE
+		Delete all companies that match criteria, returns some readable message information.
+		Must specify at least one of `id` or `name` so every company isn't deleted accidentally
+
+/image (This is the most finicky logic, careful)
+
+	POST
+		Create an image as a BLOB in the database, returns some readable message information.
+		Should handle every reasonable image type automatically: PNG, JPEG, BMP, GIF, etc.
+		Feel free to try SVG but don't hold your breath.
+		Must submit as a form with the image binary being in the `image` input.
+		An example with curl: curl -i -X POST -F image=@/path/to/image 127.0.0.1:4567/image
+
+	GET
+		Return a singular image from the database as a static asset.
+		Must specify `id`.
+
+	PUT
+		Update a singular image by replacing the binary data and image type.
+		Must specify `id` in the URL and supply an image just like in the POST path.
+
+	DELETE
+		Delete a singular image, returns some readable message information.
+		Must specify `id` in the URL.
+
+/link
+
+	POST
+		Create a link, returns some readable message information.
+		All of the below attributes must be submitted as a form and all are optional:
+			- imageId: Relation ID to the image table
+			- title: Metadata
+			- link: URL slug
+			- description: More metadata
+
+	GET
+		Get a list of links, returns a JSON encoded version of the database objects.
+		Optionally specify `id` as a URL parameter to return a max of one object.
+
+	PUT
+		Update a singular link in the database, returns some readable message information.
+		Must specify `id` as a URL parameter or a form input.
+		The same inputs that are submitted in the POST path are accepted here.
+
+	DELETE
+		Delete a singular link in the database, returns some readable message information.
+		Must specify `id` as a URL parameter.
+
+/linkType
+	
+	POST
+		Create a link type, returns some readable message information.
+		Not sure if this table is even useful.
+		All of the below attributes must be submitted as a form, `name` is required but `description` is not:
+			- name: Name of the link type
+			- description: Metadata
+
+	GET
+		Get a list of link types, returns a JSON encoded version of the database objects.
+		Optionally specify `id` as a URL parameter to return a max of one object.
+
+	PUT
+		Update a singular link type in the database, returns some readable message information.
+		Must specify `id` as a URL parameter or a form input.
+		The same inputs that are submitted in the POST path are accepted here.
+
+	DELETE
+		Delete a singular link type in the database, returns some readable message information.
+		Must specify `id` as a URL parameter.
+
+/portal
+	
+	POST
+		Create a portal, returns some readable message information.
+		All of the below attributes are submitted as a form:
+			- [REQUIRED] companyId: Relation ID to the company table
+			- [OPTIONAL] logoImageId: Relation ID to the image table
+			- [REQUIRED] name: Name of the portal
+			- [REQUIRED] cname: Name of the portal inside the URL (cname.altourportal.com)
+			- [OPTIONAL] welcomeMessage: Metadata
+			- [OPTIONAL] assistanceInfo: Metadata
+
+	GET
+		Get a list of portals, returns a JSON encoded version of the database objects.
+		Optionally specify `id` as a URL parameter to return a max of one object.
+
+	PUT
+		Update a singular portal in the database, returns some readable message information.
+		Must specify `id` as a URL parameter or a form input.
+		The same inputs that are submitted in the POST path are accepted here.
+
+	DELETE
+		Delete a singular portal in the database, returns some readable message information.
+		Must specify `id` as a URL parameter.
+
+/portalLink
+	
+	POST
+		Create a link for a portal.
+		Ties together the portal, link, and linkType tables so you can make a decision on what needs to be displayed where.
+		For example, you may post a "homepage" type to linkType to determine which links become public, and a "manager" type for private links.
+		All of the below parameters are submitted in the URL:
+			- [REQUIRED] portalId: Relation ID to the portal table
+			- [OPTIONAL] imageId: Relation ID to the image table
+			- [OPTIONAL] linkTypeId: Relation ID to the linkType table
+
+	GET
+		Get a list of portal link relations, returns a JSON encoded version of the database objects.
+		Can filter by any of the parameters listed in the POST path.
+
+	Note: No update exists for portal link due to some bad schema decisions.
+
+	DELETE
+		Delete any number of portal links in the database, returns some readable message information.
+		Must specify at least one of the parameters in the POST path.
